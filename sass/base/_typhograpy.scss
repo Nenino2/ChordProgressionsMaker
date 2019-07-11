@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Impact';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Impact.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/RobotoSlab-Bold.ttf');
+}
+
+
+$font-main-title: 'Impact', serif;
+$font-display: 'Roboto Slab', serif;
