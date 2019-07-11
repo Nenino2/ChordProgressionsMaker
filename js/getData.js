@@ -14,9 +14,8 @@ const getData = async function(cp = '') {
         'Authorization': `Bearer ${activkey}`
       }
     });
-    console.log(response);
     const data = await response.json();
-    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }

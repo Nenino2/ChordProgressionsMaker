@@ -7,15 +7,13 @@
     <title>Chords Web Application</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="app">
       <main class="main">
         <header class="header">
           <h1 class="heading-1">Chord progressions maker</h1>
         </header>
         <div class="cards">
-          <div class="card">Do M</div>
-          <div class="card">Re m</div>
-          <div class="card">Mi m</div>
+          <div class="card" v-for="(card, index) in cards" v-html="card.chord_HTML.toUpperCase()" :key="index" @click="selectCard(card)"></div>
         </div>
       </main>
     </div>
