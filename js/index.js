@@ -1,5 +1,5 @@
 import getData from './getData';
-import Vue from 'vue/dist/vue';
+import Vue from 'vue/dist/vue.min.js';
 
 window.vueistance = new Vue({
   el: '#app',
@@ -16,7 +16,7 @@ window.vueistance = new Vue({
         if (data.length) {
           return data;
         } else {
-          return getData() // TODO: this.recentCards[0].child_path as attribute 
+          return getData(this.recentCards[this.recentCards.length - 1].chord_ID);
         }
       }).then(cards => {
         cards = cards.slice(0, 10);
