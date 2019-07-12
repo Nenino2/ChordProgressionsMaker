@@ -1,0 +1,11 @@
+.recents {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, 10rem );
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  justify-items: stretch;
+
+  @media only screen and (max-width: 37.5em) {
+    justify-content: center;
+  }
+}

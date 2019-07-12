@@ -12,8 +12,11 @@
         <header class="header">
           <h1 class="heading-1">Chord progressions maker</h1>
         </header>
+        <div class="recents" v-if="recentCards.length">
+          <div class="recent_card" v-for="(recentCard, index) in recentCards" v-html="recentCard.chord_HTML.toUpperCase()" :key="index"></div>
+        </div>
         <div class="cards">
-          <div class="card" v-for="(card, index) in cards" v-html="card.chord_HTML.toUpperCase()" :key="index" @click="selectCard(card)"></div>
+          <div class="card" v-for="(card, index) in cards" v-html="upperCase(card.chord_HTML)" :key="index" @click="selectCard(card)"></div>
         </div>
       </main>
     </div>

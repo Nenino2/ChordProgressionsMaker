@@ -1,0 +1,10 @@
+.recent_card {
+  background: radial-gradient($card-background-color-light-1, $card-background-color-dark);
+  width: 10rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $card-text-color-2;
+  padding: .2em;
+}

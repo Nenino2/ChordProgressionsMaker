@@ -22,3 +22,20 @@
 
 $font-main-title: 'Impact', serif;
 $font-display: 'Roboto Slab', serif;
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+  transform: translateX(.2em);
+}
+
+sub {
+  bottom: -0.5em;
+  transform: translateX(-.375em);
+}
