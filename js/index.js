@@ -14,7 +14,7 @@ window.vueistance = new Vue({
         setCards(s = '') {
             getData(s)
                 .then(data => {
-                    if (data.length) {
+                    if (data) {
                         return data;
                     } else {
                         return getData(this.recentCards[0].chord_ID);
