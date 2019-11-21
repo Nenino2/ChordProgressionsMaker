@@ -1,39 +1,19 @@
-import getData from './getData';
+import getChords from './getChords';
 import Vue from 'vue/dist/vue.min.js';
 
 window.vueistance = new Vue({
     el: '#app',
     data: {
-        cards: [{ chord_HTML: 'Please Wait' }],
-        recentCards: []
+        recentChords: []
     },
-    created() {
-        this.setCards();
+    computed: {
+        selectableChords() {
+            return getChords(this.recentChords[this.recentChords.length - 1]);
+        }
     },
     methods: {
-        setCards(s = '') {
-            getData(s)
-                .then(data => {
-                    if (data) {
-                        return data;
-                    } else {
-                        return getData(this.recentCards[0].chord_ID);
-                    }
-                })
-                .then(cards => {
-                    cards = cards.filter(card => {
-                        return card.probability > 0.1;
-                    });
-                    this.cards = cards;
-                });
-        },
-        selectCard(card = {}) {
-            this.recentCards.push(card);
-            this.cards = { chord_HTML: 'Please Wait' };
-            this.setCards(card.child_path);
-        },
-        upperCase(string = 'Please Wait') {
-            return string.toUpperCase();
+        addChord(chord) {
+            this.recentChords.push(chord);
         }
     }
 });
